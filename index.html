@@ -370,38 +370,34 @@
         }
 
         #intro .intro-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        #intro .intro-card {
-            flex: 1;
-            min-width: 300px;
-            background: var(--card-inner-bg);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px var(--shadow-color);
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        #intro .intro-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px var(--shadow-color);
-        }
-
-        #intro .intro-card h3 {
-            color: var(--text-color);
-            font-size: 1.4em;
-            margin-bottom: 10px;
-            border-bottom: 2px solid var(--intro-card-border);
-            padding-bottom: 5px;
-        }
-
-        #intro .intro-card p {
+        #intro p {
             color: var(--text-color);
             font-size: 1em;
             line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        #education {
+            background: var(--card-bg);
+        }
+
+        #languages {
+            background: var(--card-bg);
+        }
+
+        #skills {
+            background: var(--card-bg);
+        }
+
+        #work {
+            background: var(--card-bg);
+        }
+
+        #achievements {
+            background: var(--card-bg);
         }
 
         .job, .education, .achievement {
@@ -420,12 +416,8 @@
             margin-bottom: 10px;
         }
 
-        ul {
-            list-style: none;
-        }
-
         ul li {
-            margin: 10px 0;
+            margin: 10px 30px;
         }
 
         .skills-grid, .language-grid {
@@ -579,7 +571,7 @@
                 font-size: 0.9em;
             }
 
-            #intro .intro-card {
+            #intro .intro-container {
                 min-width: 100%;
             }
 
@@ -618,11 +610,11 @@
             <h2 data-i18n="navigation">Navigation</h2>
             <ul>
                 <li><a href="#contact" data-i18n="contact_info">Contact Information</a></li>
-                <li><a href="#work" data-i18n="work_experience">Work Experience</a></li>
                 <li><a href="#intro" data-i18n="self_introduction">Self-Introduction</a></li>
+                <li><a href="#education" data-i18n="education">Education</a></li>
                 <li><a href="#languages" data-i18n="languages">Languages</a></li>
                 <li><a href="#skills" data-i18n="skills">Skills</a></li>
-                <li><a href="#education" data-i18n="education">Education</a></li>
+                <li><a href="#work" data-i18n="work_experience">Working Experience</a></li>
                 <li><a href="#achievements" data-i18n="achievements">Achievements</a></li>
             </ul>
             
@@ -690,89 +682,18 @@
                         <span class="emoji">📍</span>
                         <div>
                             <h3 data-i18n="location">Location</h3>
-                            <p>Hong Kong</p>
+                            <p data-i18n="hk">Hong Kong</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="section" id="work">
-                <h2><i class="fas fa-briefcase"></i> <span data-i18n="work_experience">Work Experience</span></h2>
-                <div class="job">
-                    <h3 data-i18n="job1_title">Assistant Executive Manager</h3>
-                    <p data-i18n="job1_details">HKSAR Drainage Services Department - Sewage Revenue Section | Jul 2023 - Present</p>
-                    <ul>
-                        <li data-i18n="job1_item1">Negotiated agency staff contracts to enhance welfare and ensure compliance.</li>
-                        <li data-i18n="job1_item2">Managed employee lifecycle: recruitment, onboarding, performance, offboarding.</li>
-                        <li data-i18n="job1_item3">Designed DSD Summer Internship Program with training materials and mentorship.</li>
-                        <li data-i18n="job1_item4">Supported engineer supervisor with schedules and office operations.</li>
-                        <li data-i18n="job1_item5">Maintained filing systems and prepared statistical performance reports.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3 data-i18n="job2_title">Tuition Teacher</h3>
-                    <p data-i18n="job2_details">Superstars Kids Education Center | Feb 2023 - Jul 2023</p>
-                    <ul>
-                        <li data-i18n="job2_item1">Created Student Performance Assessment Table and engaging lesson plans.</li>
-                        <li data-i18n="job2_item2">Communicated progress to parents and supported students academically/emotionally.</li>
-                        <li data-i18n="job2_item3">Managed invoices, records, and administrative documents.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3 data-i18n="job3_title">Probationary Inspector of Police</h3>
-                    <p data-i18n="job3_details">Hong Kong Police Force | Oct 2021 - Jul 2022</p>
-                    <ul>
-                        <li data-i18n="job3_item1">Completed training in conflict handling, physical fitness, and mock court.</li>
-                        <li data-i18n="job3_item2">Managed tasks under tight schedules with HR management principles.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3 data-i18n="job4_title">Wealth Management Manager</h3>
-                    <p data-i18n="job4_details">AIA | Apr 2020 - Apr 2021</p>
-                    <ul>
-                        <li data-i18n="job4_item1">Provided tailored financial planning based on client needs.</li>
-                        <li data-i18n="job4_item2">Developed new practices through active meeting participation.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3 data-i18n="job5_title">Manager Assistant (Internship)</h3>
-                    <p data-i18n="job5_details">Shanghai Pudong Development Bank Co. Ltd. | Jun 2017 - Jul 2017</p>
-                    <ul>
-                        <li data-i18n="job5_item1">Supported investment plan negotiations and analyzed 200+ client statements.</li>
-                        <li data-i18n="job5_item2">Organized and categorized client data for efficient access.</li>
-                    </ul>
                 </div>
             </div>
 
             <div class="section" id="intro">
                 <h2><i class="fas fa-user"></i> <span data-i18n="self_introduction">Self-Introduction</span></h2>
                 <div class="intro-container">
-                    <div class="intro-card">
-                        <h3 data-i18n="personalities_label">Personalities</h3>
-                        <p data-i18n="personalities">Enthusiastic team player with strong organizational and interpersonal skills. Detail-minded, target-oriented, and thrives under pressure.</p>
-                    </div>
-                    <div class="intro-card">
-                        <h3 data-i18n="specialties_label">Specialties</h3>
-                        <p data-i18n="specialties">Expertise in record/resource management, data analysis, statistical reports, and programming (Java, JavaScript, Python).</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section" id="languages">
-                <h2><i class="fas fa-language"></i> <span data-i18n="languages">Language Skills</span></h2>
-                <div class="language-grid">
-                    <p data-i18n="lang1">Cantonese: Native</p>
-                    <p data-i18n="lang2">Mandarin: Native</p>
-                    <p data-i18n="lang3">English: Proficient</p>
-                </div>
-            </div>
-
-            <div class="section" id="skills">
-                <h2><i class="fas fa-tools"></i> <span data-i18n="skills">Skills</span></h2>
-                <div class="skills-grid">
-                    <p data-i18n="skill1">MS Office</p>
-                    <p data-i18n="skill2">Word Processing</p>
-                    <p data-i18n="skill3">Programming</p>
+                    <p data-i18n="intro_para1">My name is CHEUNG Kai Leuk, Ken, and I hold a Bachelor of Business Administration degree in Finance with a minor in Computer Science from the City University of Hong Kong. I have over three years of experience in management, administration, and human resource management, contributing to government projects on data visualization, analysis, and IT solutions.</p>
+                    <p data-i18n="intro_para2">As an Assistant Executive Manager at the HKSAR Drainage Services Department, I honed my project management, leadership, and IT skills by mentoring interns, coordinating system improvements, and handling key administrative tasks under tight schedules. My expertise includes resource management, recruitment, data analysis using Power BI and Excel, and proficiency in Microsoft Office tools. These experiences highlight my strong abilities to lead teams, analyze data, and communicate effectively.</p>
+                    <p data-i18n="intro_para3">I believe a Master's degree in Information and Technology Management is crucial for advancing my professional skills and career development, enabling me to excel in technology-driven roles.</p>
                 </div>
             </div>
 
@@ -788,6 +709,80 @@
                 </div>
             </div>
 
+            <div class="section" id="languages">
+                <h2><i class="fas fa-language"></i> <span data-i18n="languages">Language Skills</span></h2>
+                <div class="language-grid">
+                    <p data-i18n="lang1">Cantonese: Native</p>
+                    <p data-i18n="lang2">Mandarin: Native</p>
+                    <p data-i18n="lang3">English: Proficient</p>
+                </div>
+            </div>
+
+            <div class="section" id="skills">
+                <h2><i class="fas fa-tools"></i> <span data-i18n="skills">Skills</span></h2>
+                <div class="skills-grid">
+                    <p data-i18n="skill1">Microsoft Office (Word, PowerPoint, Excel)</p>
+                    <p data-i18n="skill2">Power BI, Excel VBA</p>
+                    <p data-i18n="skill3">Word Processing</p>
+                    <p data-i18n="skill4">Programming</p>
+                </div>
+            </div>
+
+            <div class="section" id="work">
+                <h2><i class="fas fa-briefcase"></i> <span data-i18n="work_experience">Working Experience</span></h2>
+                <div class="job">
+                    <h3 data-i18n="job1_title">Assistant Executive Manager</h3>
+                    <p data-i18n="job1_details">HKSAR Drainage Services Department - Sewage Revenue Section | Jul 2023 - Present</p>
+                    <ul>
+                        <li data-i18n="job1_item1">Negotiated agency staff contracts to enhance welfare and ensure compliance.</li>
+                        <li data-i18n="job1_item2">Managed employee lifecycle: recruitment, onboarding, performance, offboarding.</li>
+                        <li data-i18n="job1_item3">Designed DSD Summer Internship Program with training materials and mentorship.</li>
+                        <li data-i18n="job1_item4">Supported engineer supervisor with schedules and office operations.</li>
+                        <li data-i18n="job1_item5">Maintained filing systems and prepared statistical performance reports.</li>
+                        <li data-i18n="job1_item6">Managing internal technical training materials and procedural documentation; standardizing workflows, presentation templates, and external communication guidelines.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job2_title">Tuition Teacher</h3>
+                    <p data-i18n="job2_details">Superstars Kids Education Center | Feb 2023 - Jul 2023</p>
+                    <ul>
+                        <li data-i18n="job2_item1">Created Student Performance Assessment Table and engaging lesson plans.</li>
+                        <li data-i18n="job2_item2">Communicated progress to parents and supported students academically/emotionally.</li>
+                        <li data-i18n="job2_item3">Managed invoices, records, and administrative documents.</li>
+                        <li data-i18n="job2_item4"></li>
+                        <li data-i18n="job2_item5"></li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job3_title">Probationary Inspector of Police</h3>
+                    <p data-i18n="job3_details">Hong Kong Police Force | Oct 2021 - Jul 2022</p>
+                    <ul>
+                        <li data-i18n="job3_item1">Completed training in conflict handling, physical fitness, and mock court.</li>
+                        <li data-i18n="job3_item2">Managed tasks under tight schedules with HR management principles.</li>
+                        <li data-i18n="job3_item3"></li>
+                        <li data-i18n="job3_item4"></li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job4_title">Wealth Management Manager</h3>
+                    <p data-i18n="job4_details">AIA | Apr 2020 - Apr 2021</p>
+                    <ul>
+                        <li data-i18n="job4_item1">Provided tailored financial planning based on client needs.</li>
+                        <li data-i18n="job4_item2">Developed new practices through active meeting participation.</li>
+                        <li data-i18n="job4_item3"></li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job5_title">Manager Assistant (Internship)</h3>
+                    <p data-i18n="job5_details">Shanghai Pudong Development Bank Co. Ltd. | Jun 2017 - Jul 2017</p>
+                    <ul>
+                        <li data-i18n="job5_item1">Supported investment plan negotiations and analyzed 200+ client statements.</li>
+                        <li data-i18n="job5_item2">Organized and categorized client data for efficient access.</li>
+                        <li data-i18n="job5_item3"></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="section" id="achievements">
                 <h2><i class="fas fa-trophy"></i> <span data-i18n="achievements">Achievements</span></h2>
                 <div class="achievement">
@@ -796,6 +791,7 @@
                     <ul>
                         <li data-i18n="ach1_item1">Led team analyzing Link (0823.HK) equity research.</li>
                         <li data-i18n="ach1_item2">Consulted CFA director and conducted property visits.</li>
+                        <li data-i18n="ach1_item3"></li>
                     </ul>
                 </div>
                 <div class="achievement">
@@ -804,6 +800,7 @@
                     <ul>
                         <li data-i18n="ach2_item1">Led market research on mobile banking apps.</li>
                         <li data-i18n="ach2_item2">Completed internship in ICBC Internet Finance Department.</li>
+                        <li data-i18n="ach2_item3"></li>
                     </ul>
                 </div>
             </div>
@@ -819,43 +816,50 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         const translations = {
             en: {
                 navigation: "Navigation",
-                work_experience: "Work Experience",
+                work_experience: "Working Experience",
                 self_introduction: "Self-Introduction",
                 languages: "Languages",
                 skills: "Skills",
                 education: "Education",
                 achievements: "Achievements",
                 name: "CHEUNG Kai Leuk, Ken",
-                title: "HR & Admin Specialist | Enthusiastic Problem Solver",
+                title: "",
                 job1_title: "Assistant Executive Manager",
                 job1_details: "HKSAR Drainage Services Department - Sewage Revenue Section | Jul 2023 - Present",
-                job1_item1: "Negotiated agency staff contracts to enhance welfare and ensure compliance.",
-                job1_item2: "Managed employee lifecycle: recruitment, onboarding, performance, offboarding.",
-                job1_item3: "Designed DSD Summer Internship Program with training materials and mentorship.",
-                job1_item4: "Supported engineer supervisor with schedules and office operations.",
-                job1_item5: "Maintained filing systems and prepared statistical performance reports.",
+                job1_item1: "Monitoring, preparing, and updating statistical reports to review monthly performance while supervising clerical staff and leading subordinates; preparing performance appraisal reports.",
+                job1_item2: "Drafting meeting minutes, letters, and memos; overseeing record management and filing government documents to ensure comprehensive administrative support.",
+                job1_item3: "Managing and compiling statistical reports to evaluate the monthly performance of the Sewage Revenue Team.",
+                job1_item4: "Providing administrative support to the Summer Internship Program, including preparing training materials and supervising interns\' performance.",
+                job1_item5: "Coordinating internal system enhancements by collaborating with IT vendors to propose and address improvement requirements.",
+                job1_item6: "Managing internal technical training materials and procedural documentation; standardizing workflows, presentation templates, and external communication guidelines.",
                 job2_title: "Tuition Teacher",
                 job2_details: "Superstars Kids Education Center | Feb 2023 - Jul 2023",
-                job2_item1: "Created Student Performance Assessment Table and engaging lesson plans.",
-                job2_item2: "Communicated progress to parents and supported students academically/emotionally.",
-                job2_item3: "Managed invoices, records, and administrative documents.",
+                job2_item1: "Design and maintain Student Performance Assessment Table.",
+                job2_item2: "Planning and preparing instructional materials, creating lesson plans, and delivering engaging and effective lessons to students.",
+                job2_item3: "Communicating student progress to their parents and responding to their inquiries.",
+                job2_item4: "Providing guidance and support to students, both academically and emotionally. Help students set goals, develop self-study skills, and navigate challenges.",
+                job2_item5: "Prepare documents, handle invoice payments and update records in the internal system.",
                 job3_title: "Probationary Inspector of Police",
                 job3_details: "Hong Kong Police Force | Oct 2021 - Jul 2022",
-                job3_item1: "Completed training in conflict handling, physical fitness, and mock court.",
-                job3_item2: "Managed tasks under tight schedules with HR management principles.",
+                job3_item1: "Physical training and ad hoc exercise handling training.",
+                job3_item2: "Written test and human resource management.",
+                job3_item3: "Conflict handling and finish task under short schedule.",
+                job3_item4: "Application of law and mock court.",
                 job4_title: "Wealth Management Manager",
                 job4_details: "AIA | Apr 2020 - Apr 2021",
-                job4_item1: "Provided tailored financial planning based on client needs.",
-                job4_item2: "Developed new practices through active meeting participation.",
+                job4_item1: "Proactively participated in meetings and helped create new practices.",
+                job4_item2: "Offered hands-on assistance to customers by assessing customer needs and maintaining current knowledge of consumer preferences.",
+                job4_item3: "Provided financial planning and solutions based on clients' financial statements and targets.",
                 job5_title: "Manager Assistant (Internship)",
                 job5_details: "Shanghai Pudong Development Bank Co. Ltd. | Jun 2017 - Jul 2017",
-                job5_item1: "Supported investment plan negotiations and analyzed 200+ client statements.",
-                job5_item2: "Organized and categorized client data for efficient access.",
+                job5_item1: "Supported the senior manager in negotiating and closing investment plans for clients.",
+                job5_item2: "Analyzed over 200 clients' financial statements and provided initial recommendations about investment plans.",
+                job5_item3: "Organized and categorized over 200 current and potential client's information and data.",
                 personalities_label: "Personalities",
                 personalities: "Enthusiastic team player with strong organizational and interpersonal skills. Detail-minded, target-oriented, and thrives under pressure.",
                 specialties_label: "Specialties",
@@ -863,34 +867,41 @@
                 lang1: "Cantonese: Native",
                 lang2: "Mandarin: Native",
                 lang3: "English: Proficient",
-                skill1: "MS Office",
-                skill2: "Word Processing",
-                skill3: "Programming",
+                skill1: "Microsoft Office (Word, PowerPoint, Excel)",
+                skill2: "Power BI, Excel VBA",
+                skill3: "Chinese Word & English Word Processing",
+                skill4: "Programming (Java, JavaScript, Python)",
                 edu_title: "Bachelor of Business Administration",
                 edu_details: "City University of Hong Kong | 2016 - 2020",
                 edu_item1: "Major: Finance (Global Financial Markets)",
-                edu_item2: "Minor: Computer Science (Programming)",
-                ach1_title: "CFA Research Challenge",
+                edu_item2: "Minor: Computer Science",
+                ach1_title: "CFA Institute Research Challenge",
                 ach1_details: "2019 - 2020",
-                ach1_item1: "Led team analyzing Link (0823.HK) equity research.",
-                ach1_item2: "Consulted CFA director and conducted property visits.",
+                ach1_item1: "Team Leader of Team CityU Read equity researches of Link (0823.HK) with groupmate and discussed with groupmate.",
+                ach1_item2: "Discussed with Peter Phllips, who is CFA director in Frontier Asia Capital, how to analyze Link and how to determine the potential of a stock.",
+                ach1_item3: "Visited the properties own and manage by Link for research purposes and discussed with tenantry.",
                 ach2_title: "ICBC (Asia) Financial Innovation Competition",
                 ach2_details: "2019 - 2020 | Final Round",
-                ach2_item1: "Led market research on mobile banking apps.",
-                ach2_item2: "Completed internship in ICBC Internet Finance Department.",
+                ach2_item1: "Completed one-month summer internship in ICBC Internet Finance Department.",
+                ach2_item2: "Team Leader of Team Crystal which performing market research.",
+                ach2_item3: "Compared and Analyzed functions of mobile banking application which provide by every bank in Hong Kong. Good data collection and integration skills.",
                 footer: "© 2025 Ken Cheung. All rights reserved.",
                 contact_info: "Contact Information",
                 dob: "Date of Birth",
                 phone: "Phone",
                 email: "Email",
                 location: "Location",
+                hk: "Hong Kong",
                 download_cv: "Download CV",
                 theme_toggle_dark: "Switch to Dark Mode",
                 theme_toggle_light: "Switch to Light Mode",
                 font_size_small: "Switch to Small Font Size",
                 font_size_medium: "Switch to Medium Font Size",
                 font_size_large: "Switch to Large Font Size",
-                back_to_top: "Back to Top"
+                back_to_top: "Back to Top",
+                intro_para1: "My name is CHEUNG Kai Leuk, Ken, and I hold a Bachelor of Business Administration degree in Finance with a minor in Computer Science from the City University of Hong Kong. I have over three years of experience in management, administration, and human resource management, contributing to government projects on data visualization, analysis, and IT solutions.",
+                intro_para2: "As an Assistant Executive Manager at the HKSAR Drainage Services Department, I honed my project management, leadership, and IT skills by mentoring interns, coordinating system improvements, and handling key administrative tasks under tight schedules. My expertise includes resource management, recruitment, data analysis using Power BI and Excel, and proficiency in Microsoft Office tools. These experiences highlight my strong abilities to lead teams, analyze data, and communicate effectively.",
+                intro_para3: "I believe a Master's degree in Information and Technology Management is crucial for advancing my professional skills and career development, enabling me to excel in technology-driven roles."
             },
             "zh-TW": {
                 navigation: "導航",
@@ -900,32 +911,39 @@
                 skills: "技能",
                 education: "教育背景",
                 achievements: "成就",
-                name: "張啟略 (Ken Cheung)",
-                title: "人力資源與行政專員 | 熱情的問題解決者",
+                name: "張啟略",
+                title: "",
                 job1_title: "助理行政經理",
                 job1_details: "香港特別行政區渠務署 - 污水收入科 | 2023年7月 - 至今",
-                job1_item1: "協商代理員工合同條款，以提升福利並確保合規性。",
-                job1_item2: "管理員工全生命週期：招聘、入職、績效管理、離職。",
-                job1_item3: "設計渠務署暑期實習計劃，提供培訓材料並指導實習生。",
-                job1_item4: "協助工程師主管管理日程和辦公室運作。",
-                job1_item5: "維護檔案系統並準備統計績效報告。",
-                job2_title: "補習老師",
+                job1_item1: "監察、編制及更新統計報告，以評估每月表現，並負責監督文書人員及管理下屬，撰寫績效評估報告。",
+                job1_item2: "撰寫會議紀錄、信件及備忘錄；負責檔案管理與政府文件歸檔，以確保全面的行政支援。",
+                job1_item3: "管理及整理統計報告，以評估污水收入小組的每月表現。",
+                job1_item4: "為暑期實習計劃提供行政支援，包括編制培訓教材及監督實習生的工作表現。",
+                job1_item5: "協調內部系統改進，與 IT 供應商合作，提出並落實系統改善需求。",
+                job1_item6: "管理內部技術培訓材料及程序文件；標準化工作流程、演示文稿模板及對外溝通指引。",
+                job2_title: "補習導師",
                 job2_details: "星子教育 | 2023年2月 - 2023年7月",
-                job2_item1: "創建學生績效評估表並制定吸引人的課程計劃。",
-                job2_item2: "與家長溝通學生進展並提供學術和情感支持。",
-                job2_item3: "管理發票、記錄和行政文件。",
+                job2_item1: "設計並維護學生表現評估表。",
+                job2_item2: "計劃和準備教學材料，設計教案，並為學生提供有趣且有效的課堂教學。",
+                job2_item3: "與家長溝通學生的學習進度，並回應他們的查詢。",
+                job2_item4: "為學生提供學術和情感上的指導和支援，幫助學生設定目標、培養自學能力並克服挑戰。",
+                job2_item5: "處理發票付款及更新內部系統記錄。",
                 job3_title: "見習警務督察",
-                job3_details: "香港警察部隊 | 2021年10月 - 2022年7月",
-                job3_item1: "完成衝突處理、體能訓練和模擬法庭培訓。",
-                job3_item2: "在緊迫的時間表下管理任務，運用人力資源管理原則。",
+                job3_details: "香港警務處 | 2021年10月 - 2022年7月",
+                job3_item1: "接受體能訓練及處理突發事件的相關訓練。",
+                job3_item2: "完成筆試及人力資源管理相關工作。",
+                job3_item3: "處理衝突並在短時間內完成任務。",
+                job3_item4: "應用法律知識並參與模擬法庭訓練。",
                 job4_title: "財富管理經理",
                 job4_details: "友邦保險 (AIA) | 2020年4月 - 2021年4月",
-                job4_item1: "根據客戶需求提供定制化的財務規劃。",
-                job4_item2: "通過積極參與會議開發新實踐。",
+                job4_item1: "積極參與會議，協助制定新方案。",
+                job4_item2: "評估客戶需求，維持對消費者偏好的最新認知，為客戶提供即時的支援。",
+                job4_item3: "根據客戶的財務狀況和目標，提供財務規劃和解決方案。",
                 job5_title: "經理助理 (實習)",
                 job5_details: "上海浦東發展銀行 | 2017年6月 - 2017年7月",
-                job5_item1: "支持投資計劃談判並分析200多份客戶財務報表。",
-                job5_item2: "整理和分類客戶數據以便高效訪問。",
+                job5_item1: "協助高級經理與客戶談判並完成投資計劃簽約。",
+                job5_item2: "分析超過200名客戶的財務報表，並提供初步的投資計劃建議。",
+                job5_item3: "組織和分類超過200位現有和潛在客戶的資訊和數據。",
                 personalities_label: "個性",
                 personalities: "熱情的團隊合作者，具備出色的組織和人際交往能力。注重細節、以目標為導向，能在壓力下蓬勃發展。",
                 specialties_label: "專長",
@@ -933,34 +951,41 @@
                 lang1: "粵語：母語",
                 lang2: "普通話：母語",
                 lang3: "英語：熟練",
-                skill1: "微軟辦公軟件",
-                skill2: "文字處理",
-                skill3: "編程",
+                skill1: "微軟辦公室軟件 (Word、PowerPoint、Excel)",
+                skill2: "Power BI，Excel VBA",
+                skill3: "中文及英文輸入",
+                skill4: "編程 (Java、JavaScript、Python)",
                 edu_title: "工商管理學士",
                 edu_details: "香港城市大學 | 2016 - 2020",
                 edu_item1: "主修：金融 (全球金融市場)",
-                edu_item2: "輔修：計算機科學 (編程)",
+                edu_item2: "副修：計算機科學",
                 ach1_title: "CFA 協會投資分析比賽",
                 ach1_details: "2019 - 2020",
-                ach1_item1: "領導團隊分析Link (0823.HK) 股權研究。",
-                ach1_item2: "諮詢CFA主任並實地考察Link物業。",
+                ach1_item1: "擔任CityU隊伍隊長，與隊員共同閱讀領展 (0823.HK) 的股票研究報告並進行討論。",
+                ach1_item2: "與Frontier Asia Capital CFA主管Peter Phillips交流，討論如何分析領展及判斷股票的潛力。",
+                ach1_item3: "實地考察領展持有及管理的物業進行研究，並與租戶交流了解情況。",
                 ach2_title: "工商銀行(亞洲)金融創新大賽",
                 ach2_details: "2019 - 2020 | 決賽",
-                ach2_item1: "領導移動銀行應用程序市場研究。",
-                ach2_item2: "完成工商銀行互聯網金融部門的實習。",
+                ach2_item1: "完成為期一個月的暑期實習，於工銀亞洲互聯網金融部門工作。",
+                ach2_item2: "擔任Crystal隊伍隊長，進行市場調查。",
+                ach2_item3: "比較及分析香港各銀行提供的手機銀行應用功能，展示良好的數據收集和整合能力。",
                 footer: "© 2025 張啟略。版權所有。",
                 contact_info: "聯繫方式",
                 dob: "出生日期",
                 phone: "電話",
                 email: "電子郵件",
                 location: "地點",
+                hk: "香港",
                 download_cv: "下載簡歷",
                 theme_toggle_dark: "切換到深色模式",
                 theme_toggle_light: "切換到淺色模式",
                 font_size_small: "切換到小字體",
                 font_size_medium: "切換到中字體",
                 font_size_large: "切換到大字體",
-                back_to_top: "返回頂部"
+                back_to_top: "返回頂部",
+                intro_para1: "我的名字是張啟略 (CHEUNG Kai Leuk, Ken)，我畢業於香港城市大學，擁有工商管理學士學位，主修金融，副修計算機科學。我擁有三年以上的管理、行政和人力資源管理經驗，曾參與政府項目，專注於數據可視化、分析和資訊科技解決方案。",
+                intro_para2: "在香港特別行政區渠務署擔任助理行政經理期間，我通過指導實習生、協調系統改進以及在緊湊的時間表下處理重要行政任務，其經歷磨練了我的項目管理能力、領導力和資訊科技技能。我具備資源管理、招聘、使用 Power BI 和 Excel 進行數據分析的經驗，以及熟練操作 Microsoft Office 工具的專業能力。這些經驗充分展示了我擁有帶領團隊、有效分析數據以及清晰溝通的能力。",
+                intro_para3: "我深信攻讀資訊與科技管理碩士學位對於提升我的專業技能和職業發展至關重要，這將使我能夠在以科技為驅動的角色中脫穎而出並實現卓越的成果。"
             },
             "zh-CN": {
                 navigation: "导航",
@@ -970,32 +995,39 @@
                 skills: "技能",
                 education: "教育背景",
                 achievements: "成就",
-                name: "张启略 (Ken Cheung)",
-                title: "人力资源与行政专员 | 热情的问题解决者",
+                name: "张启略",
+                title: "",
                 job1_title: "助理行政经理",
                 job1_details: "香港特别行政区渠务署 - 污水收入科 | 2023年7月 - 至今",
-                job1_item1: "协商代理员工合同条款，以提升福利并确保合规性。",
-                job1_item2: "管理员工全生命周期：招聘、入职、绩效管理、离职。",
-                job1_item3: "设计渠务署暑期实习计划，提供培训材料并指导实习生。",
-                job1_item4: "协助工程师主管管理日程和办公室运作。",
-                job1_item5: "维护档案系统并准备统计绩效报告。",
-                job2_title: "补习老师",
+                job1_item1: "监察、编制及更新统计报告，以评估每月表现，并负责监督文书人员及管理下属，撰写绩效评估报告。",
+                job1_item2: "撰写会议纪录、信件及备忘录; 负责档案管理与政府文件归档，以确保全面的行政支持。",
+                job1_item3: "管理及整理统计报告，以评估污水收入小组的每月表现。",
+                job1_item4: "为暑期实习计划提供行政支持，包括编制培训教材及监督实习生的工作表现。",
+                job1_item5: "协调内部系统改进，与IT供应商合作，提出并落实系统改善需求。",
+                job1_item6: "管理内部技术培训材料及程序文件; 标准化工作流程、演示文稿模板及对外沟通指引。",
+                job2_title: "补习导师",
                 job2_details: "星子教育 | 2023年2月 - 2023年7月",
-                job2_item1: "创建学生绩效评估表并制定吸引人的课程计划。",
-                job2_item2: "与家长沟通学生进展并提供学术和情感支持。",
-                job2_item3: "管理发票、记录和行政文件。",
+                job2_item1: "设计并维护学生表现评估表。 ",
+                job2_item2: "计划和准备教学材料，设计教案，并为学生提供有趣且有效的课堂教学。 ",
+                job2_item3: "与家长沟通学生的学习进度，并回应他们的查询。 ",
+                job2_item4: "为学生提供学术和情感上的指导和支持，帮助学生设定目标、培养自学能力并克服挑战。 ",
+                job2_item5: "处理发票付款及更新内部系统记录。 ",
                 job3_title: "见习警务督察",
-                job3_details: "香港警察部队 | 2021年10月 - 2022年7月",
-                job3_item1: "完成冲突处理、体能训练和模拟法庭培训。",
-                job3_item2: "在紧迫的时间表下管理任务，运用人力资源管理原则。",
+                job3_details: "香港警务处 | 2021年10月 - 2022年7月",
+                job3_item1: "接受体能训练及处理突发事件的相关训练。 ",
+                job3_item2: "完成笔试及人力资源管理相关工作。 ",
+                job3_item3: "处理冲突并在短时间内完成任务。 ",
+                job3_item4: "应用法律知识并参与模拟法庭训练。 ",
                 job4_title: "财富管理经理",
                 job4_details: "友邦保险 (AIA) | 2020年4月 - 2021年4月",
-                job4_item1: "根据客户需求提供定制化的财务规划。",
-                job4_item2: "通过积极参与会议开发新实践。",
+                job4_item1: "积极参与会议，协助制定新方案。 ",
+                job4_item2: "评估客户需求，维持对消费者偏好的最新认知，为客户提供即时的支持。 ",
+                job4_item3: "根据客户的财务状况和目标，提供财务规划和解决方案。 ",
                 job5_title: "经理助理 (实习)",
                 job5_details: "上海浦东发展银行 | 2017年6月 - 2017年7月",
-                job5_item1: "支持投资计划谈判并分析200多份客户财务报表。",
-                job5_item2: "整理和分类客户数据以便高效访问。",
+                job5_item1: "协助高级经理与客户谈判并完成投资计划签约。 ",
+                job5_item2: "分析超过200名客户的财务报表，并提供初步的投资计划建议。 ",
+                job5_item3: "组织和分类超过200位现有和潜在客户的信息和数据。 ",
                 personalities_label: "个性",
                 personalities: "热情的团队合作者，具备出色的组织和人际交往能力。注重细节、以目标为导向，能在压力下蓬勃发展。",
                 specialties_label: "专长",
@@ -1003,34 +1035,41 @@
                 lang1: "粤语：母语",
                 lang2: "普通话：母语",
                 lang3: "英语：熟练",
-                skill1: "微软办公软件",
-                skill2: "文字处理",
-                skill3: "编程",
+                skill1: "微软办公软件 (Word、PowerPoint、Excel)",
+                skill2: "Power BI、Excel VBA",
+                skill3: "中文及英文文字输入",
+                skill4: "编程 (Java、JavaScript、Python)",
                 edu_title: "工商管理学士",
                 edu_details: "香港城市大学 | 2016 - 2020",
                 edu_item1: "主修：金融 (全球金融市场)",
-                edu_item2: "辅修：计算机科学 (编程)",
+                edu_item2: "副修：计算机科学",
                 ach1_title: "CFA 协会投资分析大赛",
                 ach1_details: "2019 - 2020",
-                ach1_item1: "领导团队分析Link (0823.HK) 股权研究。",
-                ach1_item2: "咨询CFA主任并实地考察Link物业。",
+                ach1_item1: "擔任CityU隊伍隊長，與隊員共同閱讀領展 (0823.HK)的股票研究報告並進行討論。",
+                ach1_item2: "與Frontier Asia Capital CFA主管Peter Phillips交流，討論如何分析領展及判斷股票的潛力。 ",
+                ach1_item3: "实地考察领展持有及管理的物业进行研究，并与租户交流了解情况。 ",
                 ach2_title: "工商银行(亚洲)金融创新大赛",
                 ach2_details: "2019 - 2020 | 决赛",
-                ach2_item1: "领导移动银行应用程序市场研究。",
-                ach2_item2: "完成工商银行互联网金融部门的实习。",
+                ach2_item1: "完成为期一个月的暑期实习，于工银亚洲互联网金融部门工作。 ",
+                ach2_item2: "担任Crystal队伍队长，进行市场调查。 ",
+                ach2_item3: "比较及分析香港各银行提供的手机银行应用功能，展示良好的数据收集和整合能力。 ",
                 footer: "© 2025 张启略。版权所有。",
                 contact_info: "联系方式",
                 dob: "出生日期",
                 phone: "电话",
                 email: "电子邮件",
                 location: "地点",
+                hk: "香港",
                 download_cv: "下载简历",
                 theme_toggle_dark: "切换到深色模式",
                 theme_toggle_light: "切换到浅色模式",
                 font_size_small: "切换到小字体",
                 font_size_medium: "切换到中字体",
                 font_size_large: "切换到大字体",
-                back_to_top: "返回顶部"
+                back_to_top: "返回顶部",
+                intro_para1: "我的名字是张启略  (CHEUNG Kai Leuk， Ken)，我毕业于香港城市大学，拥有工商管理学士学位，主修金融，副修计算机科学。 我拥有三年以上的管理、行政和人力资源管理经验，曾参与政府项目，专注于数据可视化、分析和信息科技解决方案。",
+                intro_para2: "在香港特别行政区渠务署担任助理行政经理期间，我通过指导实习生、协调系统改进以及在紧凑的时间表下处理重要行政任务，其经历磨练了我的项目管理能力、领导力和信息科技技能。 我具备资源管理、招聘、使用 Power BI 和 Excel 进行数据分析的经验，以及熟练作 Microsoft Office 工具的专业能力。 这些经验充分展示了我拥有带领团队、有效分析数据以及清晰沟通的能力。",
+                intro_para3: "我深信攻读信息与科技管理硕士学位对于提升我的专业技能和职业发展至关重要，这将使我能够在以科技为驱动的角色中脱颖而出并实现卓越的成果。"
             }
         };
 
@@ -1158,5 +1197,5 @@
             setLanguage('en');
         });
     </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92f9965f7ee4ada4',t:'MTc0NDUzMjg3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
