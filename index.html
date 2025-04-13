@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ken Cheung - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            /* Light mode variables */
+            --body-bg: linear-gradient(135deg, #ece9e6, #ffffff);
+            --text-color: #333;
+            --sidebar-bg: #2c3e50;
+            --sidebar-text: white;
+            --main-bg: white;
+            --section-border: #3498db;
+            --card-bg: #f9fafb;
+            --card-inner-bg: white;
+            --hover-bg: #3498db;
+            --footer-bg: #2c3e50;
+            --footer-text: white;
+            --shadow-color: rgba(0,0,0,0.1);
+            --skill-bg: #ecf0f1;
+            --intro-card-border: #3498db;
+            --contact-card-bg: white; /* New variable for contact cards */
+        }
+
+        [data-theme="dark"] {
+            /* Dark mode variables */
+            --body-bg: linear-gradient(135deg, #1e2a38, #2c3e50);
+            --text-color: #e0e0e0;
+            --sidebar-bg: #1a252f;
+            --sidebar-text: #e0e0e0;
+            --main-bg: #2c3e50;
+            --section-border: #4ca1af;
+            --card-bg: #34495e;
+            --card-inner-bg: #3b4b5e;
+            --hover-bg: #4ca1af;
+            --footer-bg: #1a252f;
+            --footer-text: #e0e0e0;
+            --shadow-color: rgba(0,0,0,0.3);
+            --skill-bg: #4b5e6a;
+            --intro-card-border: #4ca1af;
+            --contact-card-bg: #3b4b5e; /* Dark mode background for contact cards */
+        }
+
+        html {
+            font-size: 16px; /* Default font size (medium) */
+        }
+
+        body {
+            background: var(--body-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            padding: 20px;
+            border-radius: 12px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .sidebar ul li a {
+            color: var(--sidebar-text);
+            text-decoration: none;
+            font-size: 1em;
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background 0.3s;
+            flex: 1;
+        }
+
+        .sidebar ul li a:hover {
+            background: var(--hover-bg);
+        }
+
+        .sidebar ul li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--section-border);
+            margin-right: 10px;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        .download-cv {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .download-cv a {
+            display: inline-block;
+            background: var(--hover-bg);
+            color: var(--sidebar-text);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+        }
+
+        .download-cv a:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .controls-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        .theme-toggle button, .font-size-switcher button {
+            background: var(--hover-bg);
+            color: var(--sidebar-text);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .theme-toggle button:hover, .font-size-switcher button:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .theme-toggle button:active, .font-size-switcher button:active {
+            transform: scale(0.95);
+        }
+
+        .theme-toggle button i, .font-size-switcher button i {
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle button.toggled i {
+            transform: rotate(180deg);
+        }
+
+        .font-size-switcher button i.small {
+            transform: scale(0.6);
+        }
+
+        .font-size-switcher button i.medium {
+            transform: scale(1);
+        }
+
+        .font-size-switcher button i.large {
+            transform: scale(1.2);
+        }
+
+        .language-switcher {
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .language-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .language-select select {
+            width: 100%;
+            padding: 10px;
+            background: var(--hover-bg);
+            color: var(--sidebar-text);
+            border: none;
+            border-radius: 8px;
+            appearance: none;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .language-select select:hover {
+            background: #2980b9;
+        }
+
+        .language-select::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--sidebar-text);
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .main-content {
+            flex: 1;
+            background: var(--main-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: var(--text-color);
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 15px auto;
+            display: block;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            border: 3px solid var(--section-border);
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 4px solid var(--section-border);
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px var(--shadow-color);
+        }
+
+        .section h2 {
+            color: var(--text-color);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #contact {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--section-border);
+        }
+
+        #contact .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        #contact .contact-card {
+            background: var(--contact-card-bg); /* Use theme variable */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px var(--shadow-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-height: 80px;
+        }
+
+        #contact .contact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        #contact .contact-card span.emoji {
+            font-size: 1.5em;
+            width: 24px;
+            text-align: center;
+            margin-top: 2px;
+            margin-right: 10px;
+            color: var(--text-color); /* Ensure emoji color adapts */
+        }
+
+        #contact .contact-card div {
+            flex: 1;
+        }
+
+        #contact .contact-card h3 {
+            font-size: 0.9em;
+            font-weight: 500;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        #contact .contact-card p {
+            font-size: 1em;
+            color: var(--text-color);
+            word-wrap: break-word;
+        }
+
+        #contact .contact-card a {
+            color: var(--section-border);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        #contact .contact-card a:hover {
+            color: var(--hover-bg);
+        }
+
+        #intro {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--section-border);
+        }
+
+        #intro .intro-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #intro .intro-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-inner-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #intro .intro-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px var(--shadow-color);
+        }
+
+        #intro .intro-card h3 {
+            color: var(--text-color);
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--intro-card-border);
+            padding-bottom: 5px;
+        }
+
+        #intro .intro-card p {
+            color: var(--text-color);
+            font-size: 1em;
+            line-height: 1.8;
+        }
+
+        .job, .education, .achievement {
+            margin-bottom: 20px;
+        }
+
+        .job h3, .education h3, .achievement h3 {
+            color: var(--section-border);
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .job p, .education p, .achievement p {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        .skills-grid, .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skills-grid p, .language-grid p {
+            background: var(--skill-bg);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .skills-grid p:hover, .language-grid p:hover {
+            background: var(--hover-bg);
+            color: var(--sidebar-text);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--footer-bg);
+            color: var(--footer-text);
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        /* Back to Top Button Styles */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--hover-bg);
+            color: var(--sidebar-text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, background 0.3s, transform 0.2s;
+            box-shadow: 0 2px 8px var(--shadow-color);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .back-to-top:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 10px auto;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: static;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            #contact .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            #intro .intro-container {
+                flex-direction: column;
+            }
+
+            .controls-container {
+                gap: 6px;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 5px auto;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .job h3, .education h3, .achievement h3 {
+                font-size: 1.1em;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            #contact .contact-card {
+                padding: 12px;
+            }
+
+            #contact .contact-card span.emoji {
+                font-size: 1.2em;
+                margin-right: 8px;
+            }
+
+            #contact .contact-card h3 {
+                font-size: 0.85em;
+            }
+
+            #contact .contact-card p {
+                font-size: 0.9em;
+            }
+
+            #intro .intro-card {
+                min-width: 100%;
+            }
+
+            .theme-toggle button, .font-size-switcher button {
+                width: 32px;
+                height: 32px;
+                font-size: 1em;
+            }
+
+            .controls-container {
+                gap: 4px;
+            }
+
+            .language-switcher {
+                min-width: 80px;
+            }
+
+            .language-select select {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+
+            .back-to-top {
+                bottom: 15px;
+                right: 15px;
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 data-i18n="navigation">Navigation</h2>
+            <ul>
+                <li><a href="#contact" data-i18n="contact_info">Contact Information</a></li>
+                <li><a href="#work" data-i18n="work_experience">Work Experience</a></li>
+                <li><a href="#intro" data-i18n="self_introduction">Self-Introduction</a></li>
+                <li><a href="#languages" data-i18n="languages">Languages</a></li>
+                <li><a href="#skills" data-i18n="skills">Skills</a></li>
+                <li><a href="#education" data-i18n="education">Education</a></li>
+                <li><a href="#achievements" data-i18n="achievements">Achievements</a></li>
+            </ul>
+            
+            <div class="controls-container">
+                <div class="theme-toggle">
+                    <button id="theme-toggle-btn" data-i18n-title="theme_toggle_dark" data-i18n-aria="theme_toggle_dark">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <div class="font-size-switcher">
+                    <button id="font-size-btn" data-i18n-title="font_size_large" data-i18n-aria="font_size_large">
+                        <i class="fas fa-font"></i>
+                    </button>
+                </div>
+                <div class="language-switcher">
+                    <div class="language-select">
+                        <select onchange="setLanguage(this.value)" title="Select Language" aria-label="Select Language">
+                            <option value="en">English</option>
+                            <option value="zh-TW">繁體中文</option>
+                            <option value="zh-CN">简体中文</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-cv">
+                <a href="./pdf/Ken_Cheung_CV.pdf" download data-i18n="download_cv" data-i18n-title="download_cv" data-i18n-aria="download_cv">
+                    <span>Download CV</span>
+                </a>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header>
+                <h1 data-i18n="name">CHEUNG Kai Leuk, Ken</h1>
+                <img src="./img/avatar.jpg" alt="Ken Cheung Avatar" class="avatar">
+                <p data-i18n="title">HR & Admin Specialist | Enthusiastic Problem Solver</p>
+            </header>
+
+            <div class="section" id="contact">
+                <h2><i class="fas fa-address-book"></i> <span data-i18n="contact_info">Contact Information</span></h2>
+                <div class="contact-container">
+                    <div class="contact-card">
+                        <span class="emoji">🎂</span>
+                        <div>
+                            <h3 data-i18n="dob">Date of Birth</h3>
+                            <p>1998-03-02</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <span class="emoji">📞</span>
+                        <div>
+                            <h3 data-i18n="phone">Phone</h3>
+                            <p><a href="tel:+85259896139" aria-label="Phone number">(852) 5989 6139</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <span class="emoji">✉️</span>
+                        <div>
+                            <h3 data-i18n="email">Email</h3>
+                            <p><a href="mailto:cheungkenckl@gmail.com" aria-label="Email address">cheungkenckl@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <span class="emoji">📍</span>
+                        <div>
+                            <h3 data-i18n="location">Location</h3>
+                            <p>Hong Kong</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="work">
+                <h2><i class="fas fa-briefcase"></i> <span data-i18n="work_experience">Work Experience</span></h2>
+                <div class="job">
+                    <h3 data-i18n="job1_title">Assistant Executive Manager</h3>
+                    <p data-i18n="job1_details">HKSAR Drainage Services Department - Sewage Revenue Section | Jul 2023 - Present</p>
+                    <ul>
+                        <li data-i18n="job1_item1">Negotiated agency staff contracts to enhance welfare and ensure compliance.</li>
+                        <li data-i18n="job1_item2">Managed employee lifecycle: recruitment, onboarding, performance, offboarding.</li>
+                        <li data-i18n="job1_item3">Designed DSD Summer Internship Program with training materials and mentorship.</li>
+                        <li data-i18n="job1_item4">Supported engineer supervisor with schedules and office operations.</li>
+                        <li data-i18n="job1_item5">Maintained filing systems and prepared statistical performance reports.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job2_title">Tuition Teacher</h3>
+                    <p data-i18n="job2_details">Superstars Kids Education Center | Feb 2023 - Jul 2023</p>
+                    <ul>
+                        <li data-i18n="job2_item1">Created Student Performance Assessment Table and engaging lesson plans.</li>
+                        <li data-i18n="job2_item2">Communicated progress to parents and supported students academically/emotionally.</li>
+                        <li data-i18n="job2_item3">Managed invoices, records, and administrative documents.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job3_title">Probationary Inspector of Police</h3>
+                    <p data-i18n="job3_details">Hong Kong Police Force | Oct 2021 - Jul 2022</p>
+                    <ul>
+                        <li data-i18n="job3_item1">Completed training in conflict handling, physical fitness, and mock court.</li>
+                        <li data-i18n="job3_item2">Managed tasks under tight schedules with HR management principles.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job4_title">Wealth Management Manager</h3>
+                    <p data-i18n="job4_details">AIA | Apr 2020 - Apr 2021</p>
+                    <ul>
+                        <li data-i18n="job4_item1">Provided tailored financial planning based on client needs.</li>
+                        <li data-i18n="job4_item2">Developed new practices through active meeting participation.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3 data-i18n="job5_title">Manager Assistant (Internship)</h3>
+                    <p data-i18n="job5_details">Shanghai Pudong Development Bank Co. Ltd. | Jun 2017 - Jul 2017</p>
+                    <ul>
+                        <li data-i18n="job5_item1">Supported investment plan negotiations and analyzed 200+ client statements.</li>
+                        <li data-i18n="job5_item2">Organized and categorized client data for efficient access.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section" id="intro">
+                <h2><i class="fas fa-user"></i> <span data-i18n="self_introduction">Self-Introduction</span></h2>
+                <div class="intro-container">
+                    <div class="intro-card">
+                        <h3 data-i18n="personalities_label">Personalities</h3>
+                        <p data-i18n="personalities">Enthusiastic team player with strong organizational and interpersonal skills. Detail-minded, target-oriented, and thrives under pressure.</p>
+                    </div>
+                    <div class="intro-card">
+                        <h3 data-i18n="specialties_label">Specialties</h3>
+                        <p data-i18n="specialties">Expertise in record/resource management, data analysis, statistical reports, and programming (Java, JavaScript, Python).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="languages">
+                <h2><i class="fas fa-language"></i> <span data-i18n="languages">Language Skills</span></h2>
+                <div class="language-grid">
+                    <p data-i18n="lang1">Cantonese: Native</p>
+                    <p data-i18n="lang2">Mandarin: Native</p>
+                    <p data-i18n="lang3">English: Proficient</p>
+                </div>
+            </div>
+
+            <div class="section" id="skills">
+                <h2><i class="fas fa-tools"></i> <span data-i18n="skills">Skills</span></h2>
+                <div class="skills-grid">
+                    <p data-i18n="skill1">MS Office</p>
+                    <p data-i18n="skill2">Word Processing</p>
+                    <p data-i18n="skill3">Programming</p>
+                </div>
+            </div>
+
+            <div class="section" id="education">
+                <h2><i class="fas fa-graduation-cap"></i> <span data-i18n="education">Education</span></h2>
+                <div class="education">
+                    <h3 data-i18n="edu_title">Bachelor of Business Administration</h3>
+                    <p data-i18n="edu_details">City University of Hong Kong | 2016 - 2020</p>
+                    <ul>
+                        <li data-i18n="edu_item1">Major: Finance (Global Financial Markets)</li>
+                        <li data-i18n="edu_item2">Minor: Computer Science (Programming)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section" id="achievements">
+                <h2><i class="fas fa-trophy"></i> <span data-i18n="achievements">Achievements</span></h2>
+                <div class="achievement">
+                    <h3 data-i18n="ach1_title">CFA Institute Research Challenge</h3>
+                    <p data-i18n="ach1_details">2019 - 2020</p>
+                    <ul>
+                        <li data-i18n="ach1_item1">Led team analyzing Link (0823.HK) equity research.</li>
+                        <li data-i18n="ach1_item2">Consulted CFA director and conducted property visits.</li>
+                    </ul>
+                </div>
+                <div class="achievement">
+                    <h3 data-i18n="ach2_title">ICBC (Asia) Financial Innovation Competition</h3>
+                    <p data-i18n="ach2_details">2019 - 2020 | Final Round</p>
+                    <ul>
+                        <li data-i18n="ach2_item1">Led market research on mobile banking apps.</li>
+                        <li data-i18n="ach2_item2">Completed internship in ICBC Internet Finance Department.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer>
+                <p data-i18n="footer">© 2025 Ken Cheung. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top" data-i18n-title="back_to_top" data-i18n-aria="back_to_top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        const translations = {
+            en: {
+                navigation: "Navigation",
+                work_experience: "Work Experience",
+                self_introduction: "Self-Introduction",
+                languages: "Languages",
+                skills: "Skills",
+                education: "Education",
+                achievements: "Achievements",
+                name: "CHEUNG Kai Leuk, Ken",
+                title: "HR & Admin Specialist | Enthusiastic Problem Solver",
+                job1_title: "Assistant Executive Manager",
+                job1_details: "HKSAR Drainage Services Department - Sewage Revenue Section | Jul 2023 - Present",
+                job1_item1: "Negotiated agency staff contracts to enhance welfare and ensure compliance.",
+                job1_item2: "Managed employee lifecycle: recruitment, onboarding, performance, offboarding.",
+                job1_item3: "Designed DSD Summer Internship Program with training materials and mentorship.",
+                job1_item4: "Supported engineer supervisor with schedules and office operations.",
+                job1_item5: "Maintained filing systems and prepared statistical performance reports.",
+                job2_title: "Tuition Teacher",
+                job2_details: "Superstars Kids Education Center | Feb 2023 - Jul 2023",
+                job2_item1: "Created Student Performance Assessment Table and engaging lesson plans.",
+                job2_item2: "Communicated progress to parents and supported students academically/emotionally.",
+                job2_item3: "Managed invoices, records, and administrative documents.",
+                job3_title: "Probationary Inspector of Police",
+                job3_details: "Hong Kong Police Force | Oct 2021 - Jul 2022",
+                job3_item1: "Completed training in conflict handling, physical fitness, and mock court.",
+                job3_item2: "Managed tasks under tight schedules with HR management principles.",
+                job4_title: "Wealth Management Manager",
+                job4_details: "AIA | Apr 2020 - Apr 2021",
+                job4_item1: "Provided tailored financial planning based on client needs.",
+                job4_item2: "Developed new practices through active meeting participation.",
+                job5_title: "Manager Assistant (Internship)",
+                job5_details: "Shanghai Pudong Development Bank Co. Ltd. | Jun 2017 - Jul 2017",
+                job5_item1: "Supported investment plan negotiations and analyzed 200+ client statements.",
+                job5_item2: "Organized and categorized client data for efficient access.",
+                personalities_label: "Personalities",
+                personalities: "Enthusiastic team player with strong organizational and interpersonal skills. Detail-minded, target-oriented, and thrives under pressure.",
+                specialties_label: "Specialties",
+                specialties: "Expertise in record/resource management, data analysis, statistical reports, and programming (Java, JavaScript, Python).",
+                lang1: "Cantonese: Native",
+                lang2: "Mandarin: Native",
+                lang3: "English: Proficient",
+                skill1: "MS Office",
+                skill2: "Word Processing",
+                skill3: "Programming",
+                edu_title: "Bachelor of Business Administration",
+                edu_details: "City University of Hong Kong | 2016 - 2020",
+                edu_item1: "Major: Finance (Global Financial Markets)",
+                edu_item2: "Minor: Computer Science (Programming)",
+                ach1_title: "CFA Research Challenge",
+                ach1_details: "2019 - 2020",
+                ach1_item1: "Led team analyzing Link (0823.HK) equity research.",
+                ach1_item2: "Consulted CFA director and conducted property visits.",
+                ach2_title: "ICBC (Asia) Financial Innovation Competition",
+                ach2_details: "2019 - 2020 | Final Round",
+                ach2_item1: "Led market research on mobile banking apps.",
+                ach2_item2: "Completed internship in ICBC Internet Finance Department.",
+                footer: "© 2025 Ken Cheung. All rights reserved.",
+                contact_info: "Contact Information",
+                dob: "Date of Birth",
+                phone: "Phone",
+                email: "Email",
+                location: "Location",
+                download_cv: "Download CV",
+                theme_toggle_dark: "Switch to Dark Mode",
+                theme_toggle_light: "Switch to Light Mode",
+                font_size_small: "Switch to Small Font Size",
+                font_size_medium: "Switch to Medium Font Size",
+                font_size_large: "Switch to Large Font Size",
+                back_to_top: "Back to Top"
+            },
+            "zh-TW": {
+                navigation: "導航",
+                work_experience: "工作經驗",
+                self_introduction: "自我介紹",
+                languages: "語言技能",
+                skills: "技能",
+                education: "教育背景",
+                achievements: "成就",
+                name: "張啟略 (Ken Cheung)",
+                title: "人力資源與行政專員 | 熱情的問題解決者",
+                job1_title: "助理行政經理",
+                job1_details: "香港特別行政區渠務署 - 污水收入科 | 2023年7月 - 至今",
+                job1_item1: "協商代理員工合同條款，以提升福利並確保合規性。",
+                job1_item2: "管理員工全生命週期：招聘、入職、績效管理、離職。",
+                job1_item3: "設計渠務署暑期實習計劃，提供培訓材料並指導實習生。",
+                job1_item4: "協助工程師主管管理日程和辦公室運作。",
+                job1_item5: "維護檔案系統並準備統計績效報告。",
+                job2_title: "補習老師",
+                job2_details: "星子教育 | 2023年2月 - 2023年7月",
+                job2_item1: "創建學生績效評估表並制定吸引人的課程計劃。",
+                job2_item2: "與家長溝通學生進展並提供學術和情感支持。",
+                job2_item3: "管理發票、記錄和行政文件。",
+                job3_title: "見習警務督察",
+                job3_details: "香港警察部隊 | 2021年10月 - 2022年7月",
+                job3_item1: "完成衝突處理、體能訓練和模擬法庭培訓。",
+                job3_item2: "在緊迫的時間表下管理任務，運用人力資源管理原則。",
+                job4_title: "財富管理經理",
+                job4_details: "友邦保險 (AIA) | 2020年4月 - 2021年4月",
+                job4_item1: "根據客戶需求提供定制化的財務規劃。",
+                job4_item2: "通過積極參與會議開發新實踐。",
+                job5_title: "經理助理 (實習)",
+                job5_details: "上海浦東發展銀行 | 2017年6月 - 2017年7月",
+                job5_item1: "支持投資計劃談判並分析200多份客戶財務報表。",
+                job5_item2: "整理和分類客戶數據以便高效訪問。",
+                personalities_label: "個性",
+                personalities: "熱情的團隊合作者，具備出色的組織和人際交往能力。注重細節、以目標為導向，能在壓力下蓬勃發展。",
+                specialties_label: "專長",
+                specialties: "擅長記錄/資源管理、數據分析、統計報告和編程 (Java, JavaScript, Python)。",
+                lang1: "粵語：母語",
+                lang2: "普通話：母語",
+                lang3: "英語：熟練",
+                skill1: "微軟辦公軟件",
+                skill2: "文字處理",
+                skill3: "編程",
+                edu_title: "工商管理學士",
+                edu_details: "香港城市大學 | 2016 - 2020",
+                edu_item1: "主修：金融 (全球金融市場)",
+                edu_item2: "輔修：計算機科學 (編程)",
+                ach1_title: "CFA 協會投資分析比賽",
+                ach1_details: "2019 - 2020",
+                ach1_item1: "領導團隊分析Link (0823.HK) 股權研究。",
+                ach1_item2: "諮詢CFA主任並實地考察Link物業。",
+                ach2_title: "工商銀行(亞洲)金融創新大賽",
+                ach2_details: "2019 - 2020 | 決賽",
+                ach2_item1: "領導移動銀行應用程序市場研究。",
+                ach2_item2: "完成工商銀行互聯網金融部門的實習。",
+                footer: "© 2025 張啟略。版權所有。",
+                contact_info: "聯繫方式",
+                dob: "出生日期",
+                phone: "電話",
+                email: "電子郵件",
+                location: "地點",
+                download_cv: "下載簡歷",
+                theme_toggle_dark: "切換到深色模式",
+                theme_toggle_light: "切換到淺色模式",
+                font_size_small: "切換到小字體",
+                font_size_medium: "切換到中字體",
+                font_size_large: "切換到大字體",
+                back_to_top: "返回頂部"
+            },
+            "zh-CN": {
+                navigation: "导航",
+                work_experience: "工作经验",
+                self_introduction: "自我介绍",
+                languages: "语言技能",
+                skills: "技能",
+                education: "教育背景",
+                achievements: "成就",
+                name: "张启略 (Ken Cheung)",
+                title: "人力资源与行政专员 | 热情的问题解决者",
+                job1_title: "助理行政经理",
+                job1_details: "香港特别行政区渠务署 - 污水收入科 | 2023年7月 - 至今",
+                job1_item1: "协商代理员工合同条款，以提升福利并确保合规性。",
+                job1_item2: "管理员工全生命周期：招聘、入职、绩效管理、离职。",
+                job1_item3: "设计渠务署暑期实习计划，提供培训材料并指导实习生。",
+                job1_item4: "协助工程师主管管理日程和办公室运作。",
+                job1_item5: "维护档案系统并准备统计绩效报告。",
+                job2_title: "补习老师",
+                job2_details: "星子教育 | 2023年2月 - 2023年7月",
+                job2_item1: "创建学生绩效评估表并制定吸引人的课程计划。",
+                job2_item2: "与家长沟通学生进展并提供学术和情感支持。",
+                job2_item3: "管理发票、记录和行政文件。",
+                job3_title: "见习警务督察",
+                job3_details: "香港警察部队 | 2021年10月 - 2022年7月",
+                job3_item1: "完成冲突处理、体能训练和模拟法庭培训。",
+                job3_item2: "在紧迫的时间表下管理任务，运用人力资源管理原则。",
+                job4_title: "财富管理经理",
+                job4_details: "友邦保险 (AIA) | 2020年4月 - 2021年4月",
+                job4_item1: "根据客户需求提供定制化的财务规划。",
+                job4_item2: "通过积极参与会议开发新实践。",
+                job5_title: "经理助理 (实习)",
+                job5_details: "上海浦东发展银行 | 2017年6月 - 2017年7月",
+                job5_item1: "支持投资计划谈判并分析200多份客户财务报表。",
+                job5_item2: "整理和分类客户数据以便高效访问。",
+                personalities_label: "个性",
+                personalities: "热情的团队合作者，具备出色的组织和人际交往能力。注重细节、以目标为导向，能在压力下蓬勃发展。",
+                specialties_label: "专长",
+                specialties: "擅长记录/资源管理、数据分析、统计报告和编程 (Java, JavaScript, Python)。",
+                lang1: "粤语：母语",
+                lang2: "普通话：母语",
+                lang3: "英语：熟练",
+                skill1: "微软办公软件",
+                skill2: "文字处理",
+                skill3: "编程",
+                edu_title: "工商管理学士",
+                edu_details: "香港城市大学 | 2016 - 2020",
+                edu_item1: "主修：金融 (全球金融市场)",
+                edu_item2: "辅修：计算机科学 (编程)",
+                ach1_title: "CFA 协会投资分析大赛",
+                ach1_details: "2019 - 2020",
+                ach1_item1: "领导团队分析Link (0823.HK) 股权研究。",
+                ach1_item2: "咨询CFA主任并实地考察Link物业。",
+                ach2_title: "工商银行(亚洲)金融创新大赛",
+                ach2_details: "2019 - 2020 | 决赛",
+                ach2_item1: "领导移动银行应用程序市场研究。",
+                ach2_item2: "完成工商银行互联网金融部门的实习。",
+                footer: "© 2025 张启略。版权所有。",
+                contact_info: "联系方式",
+                dob: "出生日期",
+                phone: "电话",
+                email: "电子邮件",
+                location: "地点",
+                download_cv: "下载简历",
+                theme_toggle_dark: "切换到深色模式",
+                theme_toggle_light: "切换到浅色模式",
+                font_size_small: "切换到小字体",
+                font_size_medium: "切换到中字体",
+                font_size_large: "切换到大字体",
+                back_to_top: "返回顶部"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = translations[lang][key];
+            });
+
+            // Update button titles and aria-labels
+            document.querySelectorAll('[data-i18n-title]').forEach(element => {
+                const key = element.getAttribute('data-i18n-title');
+                element.setAttribute('title', translations[lang][key]);
+            });
+
+            document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+                const key = element.getAttribute('data-i18n-aria');
+                element.setAttribute('aria-label', translations[lang][key]);
+            });
+
+            document.documentElement.lang = lang === 'en' ? 'en' : lang === 'zh-TW' ? 'zh-Hant' : 'zh-Hans';
+
+            // Update theme toggle button based on current theme
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const themeKey = currentTheme === 'dark' ? 'theme_toggle_light' : 'theme_toggle_dark';
+            themeToggleBtn.setAttribute('title', translations[lang][themeKey]);
+            themeToggleBtn.setAttribute('aria-label', translations[lang][themeKey]);
+
+            // Update font size button based on current font size
+            const currentFontIndex = parseInt(localStorage.getItem('fontSizeIndex')) || 1;
+            const fontSizes = [
+                { size: 12, key: 'font_size_small' },
+                { size: 16, key: 'font_size_medium' },
+                { size: 20, key: 'font_size_large' }
+            ];
+            const nextFontIndex = (currentFontIndex + 1) % fontSizes.length;
+            const fontSizeBtn = document.getElementById('font-size-btn');
+            fontSizeBtn.setAttribute('title', translations[lang][fontSizes[nextFontIndex].key]);
+            fontSizeBtn.setAttribute('aria-label', translations[lang][fontSizes[nextFontIndex].key]);
+        }
+
+        // Theme toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const setTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggleBtn.innerHTML = `<i class="fas fa-${theme === 'dark' ? 'sun' : 'moon'}"></i>`;
+            const lang = document.documentElement.lang === 'zh-Hant' ? 'zh-TW' : document.documentElement.lang === 'zh-Hans' ? 'zh-CN' : 'en';
+            const key = theme === 'dark' ? 'theme_toggle_light' : 'theme_toggle_dark';
+            themeToggleBtn.setAttribute('title', translations[lang][key]);
+            themeToggleBtn.setAttribute('aria-label', translations[lang][key]);
+            themeToggleBtn.classList.toggle('toggled', theme === 'dark');
+        };
+
+        // Load saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        // Font size switcher functionality
+        const fontSizeBtn = document.getElementById('font-size-btn');
+        const htmlElement = document.documentElement;
+
+        // Define font sizes and their corresponding scale classes
+        const fontSizes = [
+            { size: 12, label: 'Small', scale: 'small', key: 'font_size_small' },
+            { size: 16, label: 'Medium', scale: 'medium', key: 'font_size_medium' },
+            { size: 20, label: 'Large', scale: 'large', key: 'font_size_large' }
+        ];
+
+        // Load saved font size index or default to medium (index 1)
+        let currentFontIndex = parseInt(localStorage.getItem('fontSizeIndex')) || 1;
+        currentFontIndex = Math.max(0, Math.min(fontSizes.length - 1, currentFontIndex));
+
+        // Function to update font size and button state
+        const updateFontSize = (index) => {
+            currentFontIndex = index;
+            const { size, scale, key } = fontSizes[currentFontIndex];
+            htmlElement.style.fontSize = `${size}px`;
+
+            // Update the icon with the correct scale class
+            const icon = fontSizeBtn.querySelector('i');
+            icon.className = `fas fa-font ${scale}`;
+
+            // Update title and aria-label for accessibility
+            const nextIndex = (currentFontIndex + 1) % fontSizes.length;
+            const lang = document.documentElement.lang === 'zh-Hant' ? 'zh-TW' : document.documentElement.lang === 'zh-Hans' ? 'zh-CN' : 'en';
+            fontSizeBtn.setAttribute('title', translations[lang][fontSizes[nextIndex].key]);
+            fontSizeBtn.setAttribute('aria-label', translations[lang][fontSizes[nextIndex].key]);
+
+            localStorage.setItem('fontSizeIndex', currentFontIndex);
+        };
+
+        // Initialize font size
+        updateFontSize(currentFontIndex);
+
+        // Cycle through font sizes on button click
+        fontSizeBtn.addEventListener('click', () => {
+            const nextIndex = (currentFontIndex + 1) % fontSizes.length;
+            updateFontSize(nextIndex);
+        });
+
+        // Back to Top functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('en');
+        });
+    </script>
+</body>
+</html>
