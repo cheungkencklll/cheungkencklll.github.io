@@ -310,7 +310,7 @@
         }
 
         #contact .contact-card {
-            background: var(--contact-card-bg); /* Use theme variable */
+            background: var(--contact-card-bg);
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 2px 8px var(--shadow-color);
@@ -319,10 +319,41 @@
             gap: 10px;
             transition: transform 0.3s, box-shadow 0.3s;
             min-height: 80px;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box; /* Include padding in width */
         }
 
         #contact .contact-card.linkedin {
-            grid-column: span 2;
+            grid-column: span 2; /* Span two columns on larger screens */
+        }
+
+        #contact .contact-card p {
+            font-size: 1em;
+            color: var(--text-color);
+            white-space: nowrap; /* Prevent wrapping on larger screens */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis for overflow */
+        }
+
+        @media (max-width: 768px) {
+            #contact .contact-container {
+                grid-template-columns: 1fr; /* Single column on mobile */
+            }
+
+            #contact .contact-card {
+                grid-column: span 1; /* Each card takes full width */
+                width: 100%; /* Explicitly full width */
+            }
+
+            #contact .contact-card.linkedin {
+                grid-column: span 1; /* LinkedIn card also takes one column on mobile */
+            }
+
+            #contact .contact-card p {
+                white-space: normal; /* Allow wrapping on mobile */
+                overflow: visible; /* Show full content */
+                text-overflow: clip; /* Remove ellipsis */
+            }
         }
 
         #contact .contact-card:hover {
