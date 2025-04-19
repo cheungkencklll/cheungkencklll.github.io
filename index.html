@@ -72,7 +72,7 @@
         }
 
         .sidebar {
-            width: 260px;
+            width: 300px;
             background: var(--sidebar-bg);
             color: var(--sidebar-text);
             padding: 20px;
@@ -427,6 +427,10 @@
             background: var(--card-bg);
         }
 
+        #professional-qualification {
+            background: var(--card-bg);
+        }
+
         #work {
             background: var(--card-bg);
         }
@@ -435,20 +439,25 @@
             background: var(--card-bg);
         }
 
-        .job, .education, .achievement {
+        .job, .professional-qualification, .education, .achievement {
             margin-bottom: 20px;
         }
 
-        .job h3, .education h3, .achievement h3 {
+        .job h3, .professional-qualification h3, .education h3, .achievement h3 {
             color: var(--section-border);
             font-size: 1.3em;
             margin-bottom: 5px;
         }
 
-        .job p, .education p, .achievement p {
+        .job p, .professional-qualification p, .education p, .achievement p {
             font-style: italic;
             color: #7f8c8d;
             margin-bottom: 10px;
+        }
+
+        .cert-icon {
+            max-width: 150px; /* Adjust size as needed */
+            max-height: 150px; /* Ensure the icon fits nicely */
         }
 
         ul li {
@@ -543,7 +552,7 @@
             }
 
             .section h2 {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
 
             #contact .contact-container {
@@ -649,6 +658,7 @@
                 <li><a href="#education" data-i18n="education">Education</a></li>
                 <li><a href="#languages" data-i18n="languages">Languages</a></li>
                 <li><a href="#skills" data-i18n="skills">Skills</a></li>
+                <li><a href="#professional-qualification" data-i18n="professional_qualification">Professional Qualification</a></li>
                 <li><a href="#work" data-i18n="work_experience">Working Experience</a></li>
                 <li><a href="#achievements" data-i18n="achievements">Achievements</a></li>
             </ul>
@@ -770,6 +780,16 @@
                 </div>
             </div>
 
+            <div class="section" id="professional-qualification">
+                <h2><i class="fas fa-award"></i> <span data-i18n="professional_qualification">Professional Qualification</span></h2>
+                <div class="professional-qualification">
+                    <h3 data-i18n="professional_qualification1_title">Google Analytics Certification</h3>
+                    <p data-i18n="professional_qualification1_details">Apr 2025 - Apr 2026</p>
+                    <img src="./img/google-analytics-cert-icon.png" class="cert-icon" alt="Google Analytics Certificate Icon">
+                    <img src="./img/google-analytics-cert-qrcode.png" class="cert-icon" alt="Google Analytics Certificate QR Code">
+                </div>
+            </div>
+
             <div class="section" id="work">
                 <h2><i class="fas fa-briefcase"></i> <span data-i18n="work_experience">Working Experience</span></h2>
                 <div class="job">
@@ -867,6 +887,7 @@
                 self_introduction: "Self-Introduction",
                 languages: "Languages",
                 skills: "Skills",
+                professional_qualification: "Professional Qualification",
                 education: "Education",
                 achievements: "Achievements",
                 name: "CHEUNG Kai Leuk, Ken",
@@ -913,6 +934,8 @@
                 skill2: "Power BI, Excel VBA",
                 skill3: "Chinese Word & English Word Processing",
                 skill4: "Programming (Java, JavaScript, Python)",
+                professional_qualification1_title: "Google Analytics Certification",
+                professional_qualification1_details: "Apr 2025 - Apr 2026",
                 edu_title: "Bachelor of Business Administration",
                 edu_details: "City University of Hong Kong | 2016 - 2020",
                 edu_item1: "Major: Finance (Global Financial Markets)",
@@ -953,6 +976,7 @@
                 self_introduction: "自我介紹",
                 languages: "語言技能",
                 skills: "技能",
+                professional_qualification: "專業資格",
                 education: "教育背景",
                 achievements: "成就",
                 name: "張啟略",
@@ -999,6 +1023,8 @@
                 skill2: "Power BI，Excel VBA",
                 skill3: "中文及英文輸入",
                 skill4: "編程 (Java、JavaScript、Python)",
+                professional_qualification1_title: "Google Analytics 認證",
+                professional_qualification1_details: "2025年4月 - 2026年4月",
                 edu_title: "工商管理學士",
                 edu_details: "香港城市大學 | 2016 - 2020",
                 edu_item1: "主修：金融 (全球金融市場)",
@@ -1039,6 +1065,7 @@
                 self_introduction: "自我介绍",
                 languages: "语言技能",
                 skills: "技能",
+                professional_qualification: "专业资格",
                 education: "教育背景",
                 achievements: "成就",
                 name: "张启略",
@@ -1085,6 +1112,8 @@
                 skill2: "Power BI、Excel VBA",
                 skill3: "中文及英文文字输入",
                 skill4: "编程 (Java、JavaScript、Python)",
+                professional_qualification1_title: "Google Analytics 认证",
+                professional_qualification1_details: "2025年4月 - 2026年4月",
                 edu_title: "工商管理学士",
                 edu_details: "香港城市大学 | 2016 - 2020",
                 edu_item1: "主修：金融 (全球金融市场)",
