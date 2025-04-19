@@ -449,15 +449,25 @@
             margin-bottom: 5px;
         }
 
-        .job p, .professional-qualification p, .education p, .achievement p {
+        .job .info, .professional-qualification .info, .education .info, .achievement .info {
             font-style: italic;
             color: #7f8c8d;
             margin-bottom: 10px;
         }
 
-        .cert-icon {
+        .professional-qualification {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Vertically align items */
+            justify-content: space-between; /* Push text to the left and image to the right */
+        }
+
+        .cert-detail {
+            flex: 1; /* Allow text container to take up available space */
+        }
+
+        .cert-badge {
             max-width: 150px; /* Adjust size as needed */
-            max-height: 150px; /* Ensure the icon fits nicely */
+            max-height: 150px;
         }
 
         ul li {
@@ -753,7 +763,7 @@
                 <h2><i class="fas fa-graduation-cap"></i> <span data-i18n="education">Education</span></h2>
                 <div class="education">
                     <h3 data-i18n="edu_title">Bachelor of Business Administration</h3>
-                    <p data-i18n="edu_details">City University of Hong Kong | 2016 - 2020</p>
+                    <p class="info" data-i18n="edu_details">City University of Hong Kong | 2016 - 2020</p>
                     <ul>
                         <li data-i18n="edu_item1">Major: Finance (Global Financial Markets)</li>
                         <li data-i18n="edu_item2">Minor: Computer Science (Programming)</li>
@@ -783,10 +793,13 @@
             <div class="section" id="professional-qualification">
                 <h2><i class="fas fa-award"></i> <span data-i18n="professional_qualification">Professional Qualification</span></h2>
                 <div class="professional-qualification">
-                    <h3 data-i18n="professional_qualification1_title">Google Analytics Certification</h3>
-                    <p data-i18n="professional_qualification1_details">Apr 2025 - Apr 2026</p>
-                    <img src="./img/google-analytics-cert-icon.png" class="cert-icon" alt="Google Analytics Certificate Icon">
-                    <img src="./img/google-analytics-cert-qrcode.png" class="cert-icon" alt="Google Analytics Certificate QR Code">
+                    <div class="cert-detail">
+                        <h3 data-i18n="professional_qualification1_title">Google Analytics Certification</h3>
+                        <p class="info" data-i18n="professional_qualification1_details">Apr 2025 - Apr 2026</p>
+                        <p data-i18n="issued_by">Issued by Google Digital Academy (Skillshop)</p>
+                        <p data-i18n="cert_id">(Certificate ID: 140425844)</p>
+                    </div>
+                    <img src="./img/google-analytics-cert-badge.png" class="cert-badge" alt="Google Analytics Certificate Badge">
                 </div>
             </div>
 
@@ -794,7 +807,7 @@
                 <h2><i class="fas fa-briefcase"></i> <span data-i18n="work_experience">Working Experience</span></h2>
                 <div class="job">
                     <h3 data-i18n="job1_title">Assistant Executive Manager</h3>
-                    <p data-i18n="job1_details">HKSAR Drainage Services Department - Sewage Revenue Section | Jul 2023 - Present</p>
+                    <p class="info" data-i18n="job1_details">HKSAR Drainage Services Department - Sewage Revenue Section | Jul 2023 - Present</p>
                     <ul>
                         <li data-i18n="job1_item1">Negotiated agency staff contracts to enhance welfare and ensure compliance.</li>
                         <li data-i18n="job1_item2">Managed employee lifecycle: recruitment, onboarding, performance, offboarding.</li>
@@ -806,7 +819,7 @@
                 </div>
                 <div class="job">
                     <h3 data-i18n="job2_title">Tuition Teacher</h3>
-                    <p data-i18n="job2_details">Superstars Kids Education Center | Feb 2023 - Jul 2023</p>
+                    <p class="info" data-i18n="job2_details">Superstars Kids Education Center | Feb 2023 - Jul 2023</p>
                     <ul>
                         <li data-i18n="job2_item1">Created Student Performance Assessment Table and engaging lesson plans.</li>
                         <li data-i18n="job2_item2">Communicated progress to parents and supported students academically/emotionally.</li>
@@ -817,7 +830,7 @@
                 </div>
                 <div class="job">
                     <h3 data-i18n="job3_title">Probationary Inspector of Police</h3>
-                    <p data-i18n="job3_details">Hong Kong Police Force | Oct 2021 - Jul 2022</p>
+                    <p class="info" data-i18n="job3_details">Hong Kong Police Force | Oct 2021 - Jul 2022</p>
                     <ul>
                         <li data-i18n="job3_item1">Completed training in conflict handling, physical fitness, and mock court.</li>
                         <li data-i18n="job3_item2">Managed tasks under tight schedules with HR management principles.</li>
@@ -827,7 +840,7 @@
                 </div>
                 <div class="job">
                     <h3 data-i18n="job4_title">Wealth Management Manager</h3>
-                    <p data-i18n="job4_details">AIA | Apr 2020 - Apr 2021</p>
+                    <p class="info" data-i18n="job4_details">AIA | Apr 2020 - Apr 2021</p>
                     <ul>
                         <li data-i18n="job4_item1">Provided tailored financial planning based on client needs.</li>
                         <li data-i18n="job4_item2">Developed new practices through active meeting participation.</li>
@@ -836,7 +849,7 @@
                 </div>
                 <div class="job">
                     <h3 data-i18n="job5_title">Manager Assistant (Internship)</h3>
-                    <p data-i18n="job5_details">Shanghai Pudong Development Bank Co. Ltd. | Jun 2017 - Jul 2017</p>
+                    <p class="info" data-i18n="job5_details">Shanghai Pudong Development Bank Co. Ltd. | Jun 2017 - Jul 2017</p>
                     <ul>
                         <li data-i18n="job5_item1">Supported investment plan negotiations and analyzed 200+ client statements.</li>
                         <li data-i18n="job5_item2">Organized and categorized client data for efficient access.</li>
@@ -849,7 +862,7 @@
                 <h2><i class="fas fa-trophy"></i> <span data-i18n="achievements">Achievements</span></h2>
                 <div class="achievement">
                     <h3 data-i18n="ach1_title">CFA Institute Research Challenge</h3>
-                    <p data-i18n="ach1_details">2019 - 2020</p>
+                    <p class="info" data-i18n="ach1_details">2019 - 2020</p>
                     <ul>
                         <li data-i18n="ach1_item1">Led team analyzing Link (0823.HK) equity research.</li>
                         <li data-i18n="ach1_item2">Consulted CFA director and conducted property visits.</li>
@@ -858,7 +871,7 @@
                 </div>
                 <div class="achievement">
                     <h3 data-i18n="ach2_title">ICBC (Asia) Financial Innovation Competition</h3>
-                    <p data-i18n="ach2_details">2019 - 2020 | Final Round</p>
+                    <p class="info" data-i18n="ach2_details">2019 - 2020 | Final Round</p>
                     <ul>
                         <li data-i18n="ach2_item1">Led market research on mobile banking apps.</li>
                         <li data-i18n="ach2_item2">Completed internship in ICBC Internet Finance Department.</li>
@@ -936,6 +949,8 @@
                 skill4: "Programming (Java, JavaScript, Python)",
                 professional_qualification1_title: "Google Analytics Certification",
                 professional_qualification1_details: "Apr 2025 - Apr 2026",
+                issued_by: "Issued by Google Digital Academy (Skillshop)",
+                cert_id: "(Certificate ID: 140425844)",
                 edu_title: "Bachelor of Business Administration",
                 edu_details: "City University of Hong Kong | 2016 - 2020",
                 edu_item1: "Major: Finance (Global Financial Markets)",
@@ -1025,6 +1040,8 @@
                 skill4: "編程 (Java、JavaScript、Python)",
                 professional_qualification1_title: "Google Analytics 認證",
                 professional_qualification1_details: "2025年4月 - 2026年4月",
+                issued_by: "由 Google 數位學院 (Skillshop) 頒發",
+                cert_id: "(證書ID：140425844)",
                 edu_title: "工商管理學士",
                 edu_details: "香港城市大學 | 2016 - 2020",
                 edu_item1: "主修：金融 (全球金融市場)",
@@ -1114,6 +1131,8 @@
                 skill4: "编程 (Java、JavaScript、Python)",
                 professional_qualification1_title: "Google Analytics 认证",
                 professional_qualification1_details: "2025年4月 - 2026年4月",
+                issued_by: "由 Google 数字学院 (Skillshop) 颁发",
+                cert_id: "(证书 ID：140425844)",
                 edu_title: "工商管理学士",
                 edu_details: "香港城市大学 | 2016 - 2020",
                 edu_item1: "主修：金融 (全球金融市场)",
