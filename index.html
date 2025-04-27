@@ -439,17 +439,17 @@
             background: var(--card-bg);
         }
 
-        .job, .professional-qualification, .education, .achievement {
+        .job, .professional-qualification, .education, .achievement, .project {
             margin-bottom: 20px;
         }
 
-        .job h3, .professional-qualification h3, .education h3, .achievement h3 {
+        .job h3, .professional-qualification h3, .education h3, .achievement h3, .project h3 {
             color: var(--section-border);
             font-size: 1.3em;
             margin-bottom: 5px;
         }
 
-        .job .info, .professional-qualification .info, .education .info, .achievement .info {
+        .job .info, .professional-qualification .info, .education .info, .achievement .info, .project .info {
             font-style: italic;
             color: #7f8c8d;
             margin-bottom: 10px;
@@ -491,6 +491,10 @@
         .skills-grid p:hover, .language-grid p:hover {
             background: var(--hover-bg);
             color: var(--sidebar-text);
+        }
+
+        .powerbi-img {
+            width: 100%;
         }
 
         footer {
@@ -759,7 +763,7 @@
                 <div class="intro-container">
                     <p data-i18n="intro_para1">My name is CHEUNG Kai Leuk, Ken, and I hold a Bachelor of Business Administration degree in Finance with a minor in Computer Science from the City University of Hong Kong. I have over three years of experience in management, administration, and human resource management, contributing to government projects on data visualization, analysis, and IT solutions.</p>
                     <p data-i18n="intro_para2">As an Assistant Executive Manager at the HKSAR Drainage Services Department, I honed my project management, leadership, and IT skills by mentoring interns, coordinating system improvements, and handling key administrative tasks under tight schedules. My expertise includes resource management, recruitment, data analysis using Power BI and Excel, and proficiency in Microsoft Office tools. These experiences highlight my strong abilities to lead teams, analyze data, and communicate effectively.</p>
-                    <p data-i18n="intro_para3">I believe a Master's degree in Information and Technology Management is crucial for advancing my professional skills and career development, enabling me to excel in technology-driven roles.</p>
+                    <!--<p data-i18n="intro_para3">I believe a Master's degree in Information and Technology Management is crucial for advancing my professional skills and career development, enabling me to excel in technology-driven roles.</p>-->
                 </div>
             </div>
 
@@ -897,6 +901,22 @@
                 </div>
             </div>
 
+            <div class="section" id="project">
+                <div class="project">
+                    <h2><i class="fas fa-folder"></i> <span data-i18n="project_experience">Project Experience</span></h2>
+                    <h3 data-i18n="powerbi_project">Power BI Project: Project Management Dashboard</h3>
+                    <p data-i18n="powerbi_description">
+                        Developed an interactive Power BI dashboard for project management, providing real-time insights into key metrics like task completion, budget utilization, project status, and Gantt chart. Designed intuitive visualizations and integrated dynamic filters to enhance data interpretation, enabling stakeholders to track progress and make informed decisions.
+                    </p>
+                    <a href="img/powerbi-dashboard.png" data-i18n-title="powerbi_dashboard">
+                        <img class="powerbi-img" src="img/powerbi-dashboard.png" data-i18n-title="powerbi_dashboard" />
+                    </a>
+                    <a href="img/powerbi-gantt-chart.png" data-i18n-title="powerbi_gantt_chart">
+                        <img class="powerbi-img" src="img/powerbi-gantt-chart.png" data-i18n-title="powerbi_gantt_chart" />
+                    </a>
+                </div>
+            </div>
+
             <footer>
                 <p data-i18n="footer">© 2025 Ken Cheung. All rights reserved.</p>
             </footer>
@@ -1007,7 +1027,12 @@
                 back_to_top: "Back to Top",
                 intro_para1: "My name is CHEUNG Kai Leuk, Ken, and I hold a Bachelor of Business Administration degree in Finance with a minor in Computer Science from the City University of Hong Kong. I have over three years of experience in management, administration, and human resource management, contributing to government projects on data visualization, analysis, and IT solutions.",
                 intro_para2: "As an Assistant Executive Manager at the HKSAR Drainage Services Department, I honed my project management, leadership, and IT skills by mentoring interns, coordinating system improvements, and handling key administrative tasks under tight schedules. My expertise includes resource management, recruitment, data analysis using Power BI and Excel, and proficiency in Microsoft Office tools. These experiences highlight my strong abilities to lead teams, analyze data, and communicate effectively.",
-                intro_para3: "I believe a Master's degree in Information and Technology Management is crucial for advancing my professional skills and career development, enabling me to excel in technology-driven roles."
+                intro_para3: "I believe a Master's degree in Information and Technology Management is crucial for advancing my professional skills and career development, enabling me to excel in technology-driven roles.",
+                project_experience: "Project Experience",
+                powerbi_project: "Power BI Project: Project Management Dashboard",
+                powerbi_description: "Developed an interactive Power BI dashboard for project management, providing real-time insights into key metrics like task completion, budget utilization, project status, and Gantt chart. Designed intuitive visualizations and integrated dynamic filters to enhance data interpretation, enabling stakeholders to track progress and make informed decisions.",
+                powerbi_dashboard: "Power BI Dasboard",
+                powerbi_gantt_chart: "Power BI Gantt Chart"
             },
             "zh-TW": {
                 navigation: "導航",
@@ -1105,7 +1130,12 @@
                 back_to_top: "返回頂部",
                 intro_para1: "我的名字是張啟略 (CHEUNG Kai Leuk, Ken)，我畢業於香港城市大學，擁有工商管理學士學位，主修金融，副修計算機科學。我擁有三年以上的管理、行政和人力資源管理經驗，曾參與政府項目，專注於數據可視化、分析和資訊科技解決方案。",
                 intro_para2: "在香港特別行政區渠務署擔任助理行政經理期間，我通過指導實習生、協調系統改進以及在緊湊的時間表下處理重要行政任務，其經歷磨練了我的項目管理能力、領導力和資訊科技技能。我具備資源管理、招聘、使用 Power BI 和 Excel 進行數據分析的經驗，以及熟練操作 Microsoft Office 工具的專業能力。這些經驗充分展示了我擁有帶領團隊、有效分析數據以及清晰溝通的能力。",
-                intro_para3: "我深信攻讀資訊與科技管理碩士學位對於提升我的專業技能和職業發展至關重要，這將使我能夠在以科技為驅動的角色中脫穎而出並實現卓越的成果。"
+                intro_para3: "我深信攻讀資訊與科技管理碩士學位對於提升我的專業技能和職業發展至關重要，這將使我能夠在以科技為驅動的角色中脫穎而出並實現卓越的成果。",
+                project_experience: "專案經驗",
+                powerbi_project: "Power BI 專案：專案管理儀表板",
+                powerbi_description: "開發了一個用於專案管理的互動式 Power BI 儀表板，提供對任務完成情況、預算利用率、專案狀態和甘特圖等關鍵指標的即時洞察。設計了直觀的可視化效果和整合的動態過濾器，以增強資料解讀能力，使利害關係人能夠追蹤進度並做出明智的決策。",
+                powerbi_dashboard: "Power BI 儀表板",
+                powerbi_gantt_chart: "Power BI 甘特圖"
             },
             "zh-CN": {
                 navigation: "导航",
@@ -1203,7 +1233,12 @@
                 back_to_top: "返回顶部",
                 intro_para1: "我的名字是张启略  (CHEUNG Kai Leuk， Ken)，我毕业于香港城市大学，拥有工商管理学士学位，主修金融，副修计算机科学。 我拥有三年以上的管理、行政和人力资源管理经验，曾参与政府项目，专注于数据可视化、分析和信息科技解决方案。",
                 intro_para2: "在香港特别行政区渠务署担任助理行政经理期间，我通过指导实习生、协调系统改进以及在紧凑的时间表下处理重要行政任务，其经历磨练了我的项目管理能力、领导力和信息科技技能。 我具备资源管理、招聘、使用 Power BI 和 Excel 进行数据分析的经验，以及熟练作 Microsoft Office 工具的专业能力。 这些经验充分展示了我拥有带领团队、有效分析数据以及清晰沟通的能力。",
-                intro_para3: "我深信攻读信息与科技管理硕士学位对于提升我的专业技能和职业发展至关重要，这将使我能够在以科技为驱动的角色中脱颖而出并实现卓越的成果。"
+                intro_para3: "我深信攻读信息与科技管理硕士学位对于提升我的专业技能和职业发展至关重要，这将使我能够在以科技为驱动的角色中脱颖而出并实现卓越的成果。",
+                project_experience: "项目经验",
+                powerbi_project: "Power BI 项目：项目管理仪表板",
+                powerbi_description: "开发了一个用于项目管理的交互式 Power BI 仪表板，提供对任务完成情况、预算利用率、项目状态和甘特图等关键指标的实时洞察。设计了直观的可视化效果并集成了动态筛选器，以增强数据解读能力，使利益相关者能够跟踪进度并做出明智的决策。",
+                powerbi_dashboard: "Power BI 仪表板",
+                powerbi_gantt_chart: "Power BI 甘特图"
             }
         };
 
