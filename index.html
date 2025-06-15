@@ -443,7 +443,9 @@
             margin-bottom: 20px;
         }
 
-        .chart {
+        .chart-title {
+            margin-top:1rem;
+            margin-bottom: 0.5rem;
             font-weight: bold;
             text-decoration: underline;
         }
@@ -929,16 +931,22 @@
                         <p data-i18n="powerbi_description">
                             Developed an interactive Power BI dashboard for project management, providing real-time insights into key metrics like task completion, budget utilization, project status, and Gantt chart. Designed intuitive visualizations and integrated dynamic filters to enhance data interpretation, enabling stakeholders to track progress and make informed decisions.
                         </p>
+                        <p class="chart-title"; data-i18n="powerbi_dashboard">
+                            Project Management Dashboard
+                        </p>
                         <a href="img/powerbi-dashboard.png" data-i18n-title="powerbi_dashboard">
                             <img class="powerbi-img" src="img/powerbi-dashboard.png" data-i18n-title="powerbi_dashboard" />
                         </a>
+                        <p class="chart-title"; data-i18n="powerbi_gantt_chart">
+                            Gantt Chart
+                        </p>
                         <a href="img/powerbi-gantt-chart.png" data-i18n-title="powerbi_gantt_chart">
                             <img class="powerbi-img" src="img/powerbi-gantt-chart.png" data-i18n-title="powerbi_gantt_chart" />
                         </a>
                     </div>
                     
                     <div class="project">
-                        <h3 data-i18n="powerbi_project">Data Analysis Project: Linear Regression & K-Nearest Neighbor (KNN)</h3>
+                        <h3 data-i18n="data_analysis_project">Data Analysis Project: Linear Regression & K-Nearest Neighbor (KNN)</h3>
                         <p data-i18n="data_source">
                             (Data Source: Kaggle)
                         </p>
@@ -946,14 +954,14 @@
                             Developed regression models to highlight key business insights through statistical visualizations. I started with data cleaning, addressing inconsistencies and outliers to ensure data quality. Using techniques like cross-validation and regularization, I fitted linear and logistic regression models while minimizing bias and overfitting.
                         </p>
                         
-                        <p class="chart"; data-i18n="linear_regression">
+                        <p class="chart-title"; data-i18n="linear_regression">
                             Linear Regression on Budget Control
                         </p>
                         <a href="img/linear-regression.png" data-i18n-title="linear_regression">
                             <img class="powerbi-img" src="img/linear-regression.png" data-i18n-title="linear_regression" />
                         </a>
                         
-                        <p class="chart"; data-i18n="knn_model">
+                        <p class="chart-title"; data-i18n="knn_model">
                             Customer Behavior Analysis Using the K-Nearest Neighbor (KNN) Model
                         </p>
                         <a href="img/knn-model.png" data-i18n-title="knn_model">
@@ -1089,6 +1097,7 @@
                 powerbi_description: "Developed an interactive Power BI dashboard for project management, providing real-time insights into key metrics like task completion, budget utilization, project status, and Gantt chart. Designed intuitive visualizations and integrated dynamic filters to enhance data interpretation, enabling stakeholders to track progress and make informed decisions.",
                 powerbi_dashboard: "Power BI Dasboard",
                 powerbi_gantt_chart: "Power BI Gantt Chart",
+                data_analysis_project: "Data Analysis: Project Linear Regression & K-Nearest Neighbor (KNN)",
                 regression_description: "Developed regression models to highlight key business insights through statistical visualizations. I started with data cleaning, addressing inconsistencies and outliers to ensure data quality. Using techniques like cross-validation and regularization, I fitted linear and logistic regression models while minimizing bias and overfitting.",
                 linear_regression: "Linear Regression on Budget Control",
                 knn_model: "Customer Behavior Analysis Using the K-Nearest Neighbor (KNN) Model"
@@ -1206,9 +1215,10 @@
                 powerbi_description: "開發了一個用於專案管理的互動式 Power BI 儀表板，提供對任務完成情況、預算利用率、專案狀態和甘特圖等關鍵指標的即時洞察。設計了直觀的可視化效果和整合的動態過濾器，以增強資料解讀能力，使利害關係人能夠追蹤進度並做出明智的決策。",
                 powerbi_dashboard: "Power BI 儀表板",
                 powerbi_gantt_chart: "Power BI 甘特圖",
-                regression_description: "開發迴歸模型，透過統計視覺化突顯關鍵業務洞察。我首先進行資料清理，解決不一致和異常值問題，以確保資料品質。我使用交叉驗證和正則化等技術，擬合線性和邏輯回歸模型，同時最大限度地減少偏差和過度擬合。",
+                data_analysis_project: "數據分析項目：線性迴歸和KNN 模型",
+                regression_description: "開發迴歸模型，透過統計視覺化突顯關鍵業務洞察。我首先進行資料清理，解決不一致和異常值問題，以確保資料品質。其後，我使用交叉驗證和正則化等技術，擬合線性和邏輯回歸模型，同時最大限度地減少偏差和過度擬合。",
                 linear_regression: "線性迴歸模型",
-                knn_model: "KNN 模型"
+                knn_model: "使用 K-近鄰 (KNN) 模型進行顧客行為分析"
             },
             "zh-CN": {
                 navigation: "导航",
@@ -1321,9 +1331,10 @@
                 powerbi_description: "开发了一个用于项目管理的交互式 Power BI 仪表板，提供对任务完成情况、预算利用率、项目状态和甘特图等关键指标的实时洞察。设计了直观的可视化效果并集成了动态筛选器，以增强数据解读能力，使利益相关者能够跟踪进度并做出明智的决策。",
                 powerbi_dashboard: "Power BI 仪表板",
                 powerbi_gantt_chart: "Power BI 甘特图",
-                regression_description: "开发回归模型，通过统计可视化突出关键业务洞察。我首先进行数据清理，解决不一致和异常值问题，以确保数据质量。我使用交叉验证和正则化等技术，拟合线性和逻辑回归模型，同时最大限度地减少偏差和过拟合。",
+                data_analysis_project: "数据分析项目：线性回归和KNN 模型",
+                regression_description: "开发回归模型，通过统计可视化突出关键业务洞察。我首先进行数据清理，解决不一致和异常值问题，以确保数据质量。其后，我使用交叉验证和正则化等技术，拟合线性和逻辑回归模型，同时最大限度地减少偏差和过拟合。",
                 linear_regression: "线性回归模型",
-                knn_model: "KNN 模型"
+                knn_model: "使用 K-近邻 (KNN) 模型进行顾客行为分析"
             }
         };
 
