@@ -548,6 +548,23 @@
             transform: scale(0.95);
         }
 
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #e0e0e0;
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #2196f3;
+            width: 0;
+            transition: width 0.3s ease-in-out;
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -675,6 +692,10 @@
 </head>
 <body>
     <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
         <aside class="sidebar">
             <h2 data-i18n="navigation">Navigation</h2>
             <ul>
@@ -1461,6 +1482,25 @@
         document.addEventListener('DOMContentLoaded', () => {
             setLanguage('en');
         });
+
+        // Progress Bar
+        // Function to update progress bar based on scroll position
+        function updateProgress() {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+
+            const progressBar = document.getElementById("progressBar");
+
+            // Update progress bar width
+            progressBar.style.width = scrolled + "%";
+        }
+
+        // Add scroll event listener
+        window.addEventListener("scroll", updateProgress);
+
+        // Initial call to set progress on page load
+        updateProgress();
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92f9965f7ee4ada4',t:'MTc0NDUzMjg3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
